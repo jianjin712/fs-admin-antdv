@@ -5,6 +5,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "allowJs": true,
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -14,6 +15,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "./dist/ts",
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./src/types"
+    ],
     "types": [
       "mocha",
       "chai",
@@ -40,6 +45,8 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "lib"
   ]
 }

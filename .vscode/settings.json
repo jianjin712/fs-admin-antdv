@@ -1,0 +1,98 @@
+{
+  //===========================================
+  //============= Editor ======================
+  //===========================================
+  // "editor.tabSize": 2,
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "diffEditor.ignoreTrimWhitespace": false,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.requireConfig": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.renderWhitespace": "selection",
+  "editor.insertSpaces": false,
+  "editor.lineNumbers": "on", //开启行数提示
+  "editor.formatOnType": true,
+  "editor.quickSuggestions": {
+    //开启自动显示建议
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "vscode.typescript-language-features",
+  // },
+  /* "[vue]": {
+    // "editor.defaultFormatter": "ant-design-vue.vscode-ant-design-vue-helper",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }, */
+  //===========================================
+  //============= files =======================
+  //===========================================
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/elehukouben": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/tmp": true,
+    "out": true,
+    "dist": true,
+    "node_modules": true,
+    "CHANGELOG.md": true,
+    "examples": true,
+    "res": true,
+    "screenshots": true,
+    "yarn-error.log": true,
+    "**/.yarn": true
+  },
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.editorconfig": true,
+    "**/.eslintcache": true,
+    "**/bower_components": true,
+    "**/.idea": true,
+    "**/tmp": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.vscode/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/yarn.lock": true
+  },
+  //===========================================
+  //============= i18n =======================
+  //===========================================
+  // "i18n-ally.localesPaths": [
+  //   "src/i18n"
+  // ],
+  // // 以下需要自己配置
+  // "i18n-ally.keystyle": "nested",
+  // "i18n-ally.namespace": true,
+  // "i18n-ally.enabledParsers": [
+  //   "json",
+  //   "js"
+  // ],
+}

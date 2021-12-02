@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-// @ts-ignore
 import { frameworkMenus, headerMenus, filterMenus, findMenus } from "/src/router/resolve";
 import _ from "lodash-es";
 import { mitter } from "/src/utils/util.mitt";
@@ -30,13 +29,13 @@ export const useResourceStore = defineStore({
     currentAsidePath: ""
   }),
   getters: {
-    getAsideMenus() {
+    getAsideMenus(): Array<any> {
       return this.asideMenus;
     },
-    getHeaderMenus() {
+    getHeaderMenus(): Array<any> {
       return this.headerMenus;
     },
-    getFrameworkMenus() {
+    getFrameworkMenus(): Array<any> {
       return this.frameworkMenus;
     }
   },

@@ -3,7 +3,7 @@ import _ from "lodash-es";
 import { outsideResource } from "./source/outside";
 import { headerResource } from "./source/header";
 import { frameworkResource } from "./source/framework";
-// @ts-ignore
+
 const modules = import.meta.glob("/src/views/**/*.vue");
 
 let index = 0;

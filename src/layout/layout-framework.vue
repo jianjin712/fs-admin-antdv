@@ -27,15 +27,15 @@
           :menus="frameworkMenus"
         />
         <div class="header-right header-buttons">
-          <!--          <button-->
-          <!--            w:bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"-->
-          <!--            w:text="sm white"-->
-          <!--            w:font="mono light"-->
-          <!--            w:p="y-2 x-4"-->
-          <!--            w:border="2 rounded blue-200"-->
-          <!--          >-->
-          <!--            Button-->
-          <!--          </button>-->
+          <!-- <button
+            w:bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+            w:text="sm white"
+            w:font="mono light"
+            w:p="y-2 x-4"
+            w:border="2 rounded blue-200"
+          >
+            Button
+          </button> -->
           <fs-menu
             class="header-menu"
             mode="horizontal"
@@ -50,9 +50,9 @@
       </a-layout-header>
       <fs-tabs></fs-tabs>
       <a-layout-content class="fs-framework-content">
-        <router-view>
+        <router-view class="p-5">
           <template #default="{ Component, route }">
-            <transition name="fade-transverse">
+            <transition name="fade-transverse" mode="out-in" appear>
               <keep-alive :include="keepAlive">
                 <component :is="Component" :key="route.fullPath" />
               </keep-alive>
@@ -60,10 +60,10 @@
           </template>
         </router-view>
       </a-layout-content>
-      <a-layout-footer class="fs-framework-footer"
-        >by fast-crud
+      <!-- <a-layout-footer class="fs-framework-footer">
+        by fast-crud
         <fs-source-link />
-      </a-layout-footer>
+      </a-layout-footer> -->
     </a-layout>
   </a-layout>
 </template>

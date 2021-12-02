@@ -4,7 +4,12 @@
       <div class="title">角色管理</div>
     </template>
     <fs-crud ref="crudRef" v-bind="crudBinding" />
-    <a-modal v-model:visible="authzDialogVisible" width="860px" title="分配权限" @ok="updatePermission">
+    <a-modal
+      v-model:visible="authzDialogVisible"
+      width="860px"
+      title="分配权限"
+      @ok="updatePermission"
+    >
       <fs-permission-tree
         ref="permissionTreeRef"
         v-model:checkedKeys="checkedKeys"
@@ -19,13 +24,13 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted } from "vue";
-import { useCrud, useExpose } from "@fast-crud/fast-crud";
-import createCrudOptions from "./crud";
-import * as permissionApi from "../permission/api";
-import * as api from "./api";
-import { message } from "ant-design-vue";
-import FsPermissionTree from "../permission/fs-permission-tree.vue";
+import { defineComponent, ref, onMounted } from 'vue';
+import { useCrud, useExpose } from '@fast-crud/fast-crud';
+import createCrudOptions from './crud';
+import * as permissionApi from '../permission/api';
+import * as api from './api';
+import { message } from 'ant-design-vue';
+import FsPermissionTree from '../permission/fs-permission-tree.vue';
 function useAuthz() {
   const checkedKeys = ref();
 
@@ -76,7 +81,7 @@ function useAuthz() {
     authzClose();
     //await updateChecked(roleId);
 
-    message.success("授权成功");
+    message.success('授权成功');
   }
 
   return {
@@ -85,12 +90,12 @@ function useAuthz() {
     authzDialogVisible,
     permissionTreeData,
     checkedKeys,
-    permissionTreeRef
+    permissionTreeRef,
   };
 }
 
 export default defineComponent({
-  name: "AuthorityRole",
+  name: 'AuthorityRole',
   components: { FsPermissionTree },
   setup() {
     //授权配置
@@ -108,11 +113,11 @@ export default defineComponent({
     // 此处传入permission进行通用按钮权限设置，会通过commonOptions去设置actionbar和rowHandle的按钮的show属性
     // 更多关于按钮权限的源代码设置，请参考 ./src/plugin/fast-crud/index.ts （75-77行）
     const permission = {
-      prefix: "sys:auth:role", //权限代码前缀
+      prefix: 'sys:auth:role', //权限代码前缀
       extra: ({ hasActionPermission }) => {
         //额外按钮权限控制
-        return { rowHandle: { buttons: { authz: { show: hasActionPermission("authz") } } } };
-      }
+        return { rowHandle: { buttons: { authz: { show: hasActionPermission('authz') } } } };
+      },
     };
     const { resetCrudOptions } = useCrud({ expose, crudOptions, permission });
     // 你可以调用此方法，重新初始化crud配置
@@ -126,8 +131,8 @@ export default defineComponent({
     return {
       crudBinding,
       crudRef,
-      ...authz
+      ...authz,
     };
-  }
+  },
 });
 </script>
